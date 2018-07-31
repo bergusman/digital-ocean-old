@@ -139,31 +139,12 @@ sudo systemctl stop supervisor
 Создайте конфиг для `Vapor` приложения в папке `/etc/supervisor/conf.d` с именем `app.conf`
 
 ```
-[program:hello]
-command=vapor run --env=production
-directory=/home/sammy/hello/          # Put correct path here
+[program:july]
+directory=/home/vit/july-vapor
+command=/home/vit/july-vapor/.build/release/Run -e prod
+user=vit
+autostart=true
 autorestart=true
-user=sammy                            # Put username here
-stdout_logfile=/var/log/supervisor/%(program_name)-stdout.log
-stderr_logfile=/var/log/supervisor/%(program_name)-stderr.log
-```
-
-```
-[program:your-app]
-command=/path/to/app/.build/release/App serve --ip=127.0.0.1 --port=8080
-directory=/path/to/app
-user=www-data
-stdout_logfile=/var/log/supervisor/%(program_name)-stdout.log
-stderr_logfile=/var/log/supervisor/%(program_name)-stderr.log
-```
-
-```
-[program:vapor-app]
-command=/home/myappuser/vapor-app/.build/release/Run serve --env=production
-directory=/home/myappuser/vapor-app
-user=<username>
-stdout_logfile=/var/log/supervisor/%(program_name)-stdout.log
-stderr_logfile=/var/log/supervisor/%(program_name)-stderr.log
 ```
 
 Обновил конфиг и запустил
