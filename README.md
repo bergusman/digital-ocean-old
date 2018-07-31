@@ -118,8 +118,59 @@ swift --version
 
 http://supervisord.org/
 
+```
+sudo apt-get install -y supervisor
+```
+
 ### Vapor
 
+* https://medium.com/@ankitank/deploy-a-basic-vapor-app-with-nginx-and-supervisor-1ef303320726
+* https://medium.com/@ahmedraad/how-to-deploy-vapor-app-on-ubuntu-16-04-and-run-it-in-production-eef18f7b4f05
+* https://github.com/vapor-community/example
+
+Создайте конфиг для `Vapor` приложения в папке `/etc/supervisor/conf.d`
+
+```
+[program:hello]
+command=vapor run --env=production
+directory=/home/sammy/hello/          # Put correct path here
+autorestart=true
+user=sammy                            # Put username here
+stdout_logfile=/var/log/supervisor/%(program_name)-stdout.log
+stderr_logfile=/var/log/supervisor/%(program_name)-stderr.log
+```
+
+```
+[program:your-app]
+command=/path/to/app/.build/release/App serve --ip=127.0.0.1 --port=8080
+directory=/path/to/app
+user=www-data
+stdout_logfile=/var/log/supervisor/%(program_name)-stdout.log
+stderr_logfile=/var/log/supervisor/%(program_name)-stderr.log
+```
+
+```
+[program:vapor-app]
+command=/home/myappuser/vapor-app/.build/release/Run serve --env=production
+directory=/home/myappuser/vapor-app
+user=<username>
+stdout_logfile=/var/log/supervisor/%(program_name)-stdout.log
+stderr_logfile=/var/log/supervisor/%(program_name)-stderr.log
+```
+
+Обновил конфиг и запустил
+
+```
+sudo supervisorctl reread
+sudo supervisorctl add vapor
+sudo supervisorctl start vapor
+```
+
+или 
+
+```
+sudo supervisorctl update
+```
 
 ## Nginx
 
