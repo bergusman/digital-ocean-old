@@ -45,6 +45,10 @@ chmod 600 .ssh/authorized_keys
 
 ### SSHd
 
+## Файрвол UFW
+
+* https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
+
 ## GitHub
 
 Идем в папку `~/.ssh` и копируем приватный ключ на машину
@@ -117,4 +121,23 @@ http://supervisord.org/
 ### Vapor
 
 
+## Nginx
 
+* https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
+* https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
+* https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart
+
+```
+server {
+...
+    location /app2 {
+        proxy_pass http://localhost:3001;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+...
+}
+```
