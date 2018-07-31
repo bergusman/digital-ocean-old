@@ -136,7 +136,7 @@ sudo systemctl stop supervisor
 * https://medium.com/@ahmedraad/how-to-deploy-vapor-app-on-ubuntu-16-04-and-run-it-in-production-eef18f7b4f05
 * https://github.com/vapor-community/example
 
-Создайте конфиг для `Vapor` приложения в папке `/etc/supervisor/conf.d`
+Создайте конфиг для `Vapor` приложения в папке `/etc/supervisor/conf.d` с именем `app.conf`
 
 ```
 [program:hello]
