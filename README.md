@@ -62,7 +62,31 @@ ssh-add ~/.ssh/github_rsa
 
 ## Node.JS
 
+* https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04
+* https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04
+* https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 
+```
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt-get install -y build-essential
+```
+
+Проверям
+
+```
+nodejs -v
+npm -v
+```
+
+### PM2
+
+* https://pm2.io/
+
+
+```
+sudo npm install -g pm2
+```
 
 ## Vapor
 
@@ -79,4 +103,18 @@ eval "$(curl -sL https://apt.vapor.sh)"
 ```
 sudo apt-get install swift vapor
 ```
+
+Проверяем `Swift`
+
+```
+swift --version
+```
+
+## Supervisor
+
+http://supervisord.org/
+
+### Vapor
+
+
 
