@@ -122,6 +122,14 @@ http://supervisord.org/
 sudo apt-get install -y supervisor
 ```
 
+Работа с `supervisord`
+
+```
+sudo systemctl status supervisor
+sudo systemctl start supervisor
+sudo systemctl stop supervisor
+```
+
 ### Vapor
 
 * https://medium.com/@ankitank/deploy-a-basic-vapor-app-with-nginx-and-supervisor-1ef303320726
