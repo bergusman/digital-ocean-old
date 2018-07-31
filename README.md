@@ -1,4 +1,6 @@
-# Найстрока сервера
+# Настройка сервера
+
+https://github.com/bergusman/moneybot/blob/v0.1/docs/do-prepare.md
 
 ## Ubuntu
 
@@ -44,3 +46,18 @@ chmod 600 .ssh/authorized_keys
 
 
 ## Vapor
+
+https://docs.vapor.codes/3.0/install/ubuntu/
+
+Добавлям `Vapor` `Apt` репозиторий
+
+```
+eval "$(curl -sL https://apt.vapor.sh)"
+```
+
+Устанавливаем `Vapor`
+
+```
+sudo apt-get install swift vapor
+```
+
