@@ -45,6 +45,57 @@ chmod 600 .ssh/authorized_keys
 
 ### SSHd
 
+## Private Network
+
+https://www.digitalocean.com/docs/networking/private-networking/how-to/enable/
+
+Необходимо выключить машину для активации приватной сети
+
+```
+sudo shutdown -h now
+```
+
+После активации настройте машину внутри
+
+### Ubuntu 16.04
+
+Откройте файл `50-cloudimg-settings.cfg`
+
+```
+sudo nano /etc/default/grub.d/50-cloudimg-settings.cfg
+```
+
+Отредактируйте значение
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="console=tty1 console=ttyS0 net.ifnames=0"
+```
+
+Обновить настройки GRUB
+
+```
+sudo update-grub
+sudo reboot
+```
+
+После перезагрузки откройте файл `50-cloud-init.cfg`
+
+```
+sudo nano /etc/network/interfaces.d/50-cloud-init.cfg
+```
+
+Перегрузите сервис
+
+```
+sudo systemctl restart networking
+```
+
+### Проверка конфигурации
+
+```
+sudo ifconfig
+```
+
 ## Файрвол UFW
 
 * https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
