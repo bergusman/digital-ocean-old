@@ -35,6 +35,12 @@ tar xzf swift-4.1.3-RELEASE-ubuntu16.04.tar.gz
 sudo apt-get install clang libicu-dev
 ```
 
+Если `REPL` не запускается из-за питона
+
+```
+sudo apt-get update
+```
+
 Путь до `swift`
 
 ```
