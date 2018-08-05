@@ -3,7 +3,7 @@
 * https://www.digitalocean.com/community/tutorials/how-to-install-swift-and-vapor-on-ubuntu-16-04
 * https://github.com/kylef/swiftenv
 * http://dhard.ru/?p=349
-
+* https://swift.org/download/
 
 ## Установка
 
@@ -32,7 +32,13 @@ tar xzf swift-4.1.3-RELEASE-ubuntu16.04.tar.gz
 Поставить зависимости
 
 ```
-sudo apt-get install libpython2.7 clang libicu-dev libcurl3
+sudo apt-get install clang libicu-dev
+```
+
+Путь до `swift`
+
+```
+export PATH=/path/to/usr/bin:"${PATH}"
 ```
 
 ### Swiftenv
