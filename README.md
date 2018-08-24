@@ -219,6 +219,10 @@ sudo supervisorctl update
 * https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart
 
 ```
+sudo nano /etc/nginx/sites-available/default
+```
+
+```
 server {
 ...
     location /app2 {
@@ -231,4 +235,8 @@ server {
     }
 ...
 }
+```
+
+```
+sudo systemctl restart nginx
 ```
