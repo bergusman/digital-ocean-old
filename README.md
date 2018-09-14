@@ -373,3 +373,35 @@ $/b -> x
 ```
 
 Прокси доступна с /api/*
+
+## Postgresql
+
+Fix listen addresses in config:
+
+``
+
+Add:
+
+```
+listen_addresses = '*'
+```
+
+Show path to pg_hba.conf
+
+```
+SHOW hba_file;
+```
+
+On Ubuntu 18:
+
+`/etc/postgresql/10/main/pg_hba.conf`
+
+Restart postgresql
+
+```
+sudo systemctl restart postgresql
+```
+
+### Node.JS
+
+https://node-postgres.com/
