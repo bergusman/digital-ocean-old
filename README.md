@@ -279,3 +279,8 @@ sudo systemctl restart postgresql
 ### Node.JS
 
 https://node-postgres.com/
+
+## RabbitMQ
+
+https://websiteforstudents.com/installing-rabbitmq-with-erlang-otp-support-on-ubuntu-16-04-17-10-and-18-04/
+
