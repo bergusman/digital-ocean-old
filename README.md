@@ -217,6 +217,7 @@ sudo supervisorctl update
 * https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
 * https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04
 * https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04-quickstart
+* https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04
 
 ```
 sudo nano /etc/nginx/sites-available/default
@@ -241,144 +242,13 @@ server {
 sudo systemctl restart nginx
 ```
 
-```
-👍
-$/
-$
-
-$ -> /
-$/ -> /
-$/a -> /a
-$/a/ -> /a/
-$/a/b -> /a/b
-```
-
-```
-👍
-$/
-$/
-
-$ -> /
-$/ -> /
-$/a -> /a
-$/a/ -> /a/
-$/a/b -> /a/b
-```
-
-```
-👍
-$/a
-$
-
-$ -> x
-$/ -> x
-$/a -> /a
-$/a/ -> /a/
-$/a/b -> /a/b
-$/b -> x
-```
-
-```
-$/a
-$/
-
-$ -> x
-$/ -> x
-$/a -> /
-$/a/ -> //
-$/a/b -> //b
-$/b -> x
-```
-
-```
-👍
-$/a/
-$/
-
-$ -> x
-$/ -> x
-$/a -> /
-$/a/ -> /
-$/a/b -> /b
-$/a/b/ -> /b
-$/b -> x
-```
-
-```
-$/
-$/a
-
-$ -> /a
-$/ -> /a
-$/a -> /aa
-$/a/ -> /aa/
-$/a/b -> /aa/b
-$/a/b/ -> /aa/b/
-$/b -> /ab
-```
-
-```
-👍
-$/
-$/a/
-
-$ -> /a/
-$/ -> /a/
-$/a -> /a/a
-$/a/ -> /a/a/
-$/a/b -> /a/a/b
-$/a/b/ -> /a/a/b/
-$/b -> /a/b
-```
-
-```
-👍
-$/a
-$/a
-
-$ -> x
-$/ -> x
-$/a -> /a
-$/a/ -> /a/
-$/a/b -> /a/b
-$/a/b/ -> /a/b/
-$/b -> x
-```
-
-```
-$/a
-$/a/
-
-$ -> x
-$/ -> x
-$/a -> /a/
-$/a/ -> /a//
-$/a/b -> /a//b
-$/a/b/ -> /a//b/
-$/b -> x
-```
-
-```
-👍
-$/a/
-$/a/
-
-$ -> x
-$/ -> x
-$/a -> /a/
-$/a/ -> /a/
-$/a/b -> /a/b
-$/a/b/ -> /a/b/
-$/b -> x
-```
-
-Прокси доступна с /api/*
-
 ## Postgresql
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
 
 Fix listen addresses in config:
 
-``
+`/etc/postgresql/10/main/postgresql.conf`
 
 Add:
 
