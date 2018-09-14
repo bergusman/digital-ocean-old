@@ -246,6 +246,10 @@ sudo systemctl restart nginx
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
 
+### Remote connect
+
+https://blog.bigbinary.com/2016/01/23/configure-postgresql-to-allow-remote-connection.html
+
 Fix listen addresses in config:
 
 `/etc/postgresql/10/main/postgresql.conf`
