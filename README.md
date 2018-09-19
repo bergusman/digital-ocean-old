@@ -284,3 +284,26 @@ https://node-postgres.com/
 
 https://websiteforstudents.com/installing-rabbitmq-with-erlang-otp-support-on-ubuntu-16-04-17-10-and-18-04/
 
+
+## Redis
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04
+
+Установка
+
+```
+sudo apt update
+sudo apt install redis-server
+```
+
+Правки конфига
+
+```
+sudo nano /etc/redis/redis.conf
+```
+
+Открытые порты
+
+```
+sudo netstat -lnp | grep redis
+```
