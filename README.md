@@ -238,6 +238,13 @@ server {
 }
 ```
 
+
+Проверить синтаксис конфига:
+
+```
+sudo nginx -t
+```
+
 ```
 sudo systemctl restart nginx
 ```
